@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.4/css/vex-theme-os.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.4/css/vex.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.4/js/vex.combined.min.js"></script>
+<script>vex.defaultOptions.className = 'vex-theme-os'</script>
+
+<head>
+	<title>Vex alert Testing</title>
+</head>
+<body>
+<button type="button" onclick="myfunction()" >Destroy the planet</button>
+</body>
+<script>
+function myfunction(){
+    
+    vex.dialog.confirm({
+    message: 'Are you absolutely sure you want to destroy the alien planet?',
+    callback: function (value) {
+        if (value) {
+            console.log('Successfully destroyed the planet.')
+        } else {
+            console.log('Chicken.')
+        }
+    }
+})
+}
+</script>
+</html>
